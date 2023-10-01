@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <br>
+  <!-- Basic Page Needs
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>CompUDA</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/footable.standalone.min.css">
+
+  <!-- Favicon
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" href="./img/logo.svg">
+
+  <!-- Google icon -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Hover effect: https://codepen.io/nxworld/pen/ZYNOBZ -->
+  <style>
+    img {
+      display: block;
+    }
+
+    .column-50 {
+      float: left;
+      width: 50%;
+    }
+
+    .row-50:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .floating-teaser {
+      float: left;
+      width: 30%;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .venue strong {
+      color: #99324b;
+    }
+
+    .benchmark {
+      width: 100%;
+      max-width: 960px;
+      overflow: scroll;
+      overflow-y: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <h4 style="text-align:center">Real-time GAN-based Image Enhancement for Robust Underwater Monocular SLAM</h4>
+    <p align="center" , style="margin-bottom:12px;">
+      <a class="simple" href="https://zhengziqiang.github.io/" target="_blank">Ziqiang Zheng</a><sup>1#</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="#" target="_blank">Zhichao Xin</a><sup>2#</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="#" target="_blank">Zhibin Yu</a><sup>2</sup>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a class="simple" href="https://saikit.org/" target="_blank">Sai-Kit Yeung</a><sup>1</sup>
+    </p>
+
+    <p align="center" style="margin-bottom:20px;">
+      <sup>1</sup>The Hong Kong University of Science and Technology
+      <br>
+      <sup>2</sup>Ocean University of China
+    </p>
+
+    <div class="venue">
+      <p align="center"><b># Equal contribution</b></p>
+      <p align="center"><b>Frontiers in Marine Science 2023</b></p>
+    </div>
+
+    <figure>
+      <img src="img/framework.png" style="width:100%"></img>
+    </figure>
+    
+    <p align="center">Framework Overview of GAN-SLAM. </p>
+    <!-- The reference images collected under the normal condition (daytime) are regarded from the intermediate domain. We first perform the unsupervised domain adaptation (UDA) between the source domain and the intermediate domain and generated the pseudo labels for the daytime images. We assume the availability of image-level one-to-one correspondences (geometry alignment) between the daytime images and the low visibility images captured under various adverse conditions. We propose to use a geometry-aligned image translation to transfer the daytime images from the intermediate domain to a synthetic domain for reducing the visibility gap. We then conduct a final synthetic-to-real adaptation between the synthesized images and the target images. -->
+
+    <div id="teaser" class="container" style="width:100%; margin:0; padding:0">
+
+      <h5>Abstract</h5>
+      <p align="justify">
+         Underwater monocular visual simultaneous localization and mapping (SLAM) plays a vital role in underwater computer vision and robotic perception fields. Unlike the autonomous driving or aerial environment, it is tough and challenging to perform robust and accurate underwater monocular SLAM due to the complex aquatic environment and the collected critically degraded image quality. The underwater images' poor visibility, low contrast, and color distortion result in ineffective and insufficient feature matching, leading to the poor or even failure of the existing SLAM algorithms. To address this issue, we propose to introduce the generative adversarial network (GAN) for performing effective underwater image enhancement before conducting SLAM. Considering the inherent real-time requirement of SLAM, we conduct knowledge distillation to achieve GAN compression to reduce the inference cost, while achieving high-fidelity underwater image enhancement and real-time inference meanwhile. The real-time underwater image enhancement acts as the image pre-processing to build a robust and accurate underwater monocular SLAM system. With the introduction of real-time underwater image enhancement, we can significantly promote underwater SLAM performance. The proposed method is a generic framework, which could be extended to various SLAM systems and achieve various scales of performance gain. 
+        <br>
+        <br>
+      </p>
+    </div>
+
+
+    <div class="section">
+      <h5>Materials</h5>
+      <div class="container" style="width:95%">
+        <div class="row">
+          <div class="three columns" style="display: flex; flex-direction: column; align-items: center;">
+            <a href="./assets/Frontiers_2023_GAN-SLAM.pdf" target="_blank">
+              <span style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; font-size: 108px;" class="material-symbols-outlined">
+              article
+              </span>
+            </a>
+            <a href="./assets/Frontiers_2023_GAN-SLAM.pdf" target="_blank">Paper</a>
+          </div>
+          <div class="three columns" style="display: flex; flex-direction: column; align-items: center;">
+            <a href="https://www.bilibili.com/video/BV18v41137Q2/" target="_blank">
+              <span style="border: 1px solid #ddd; border-radius: 4px; padding: 2px; font-size: 108px;" class="material-symbols-outlined">
+              code
+              </span></a>
+              <a href="https://www.bilibili.com/video/BV18v41137Q2/" target="_blank">Video</a>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <br>
+
+    
+   <!--  <div class="container" style="width:100%; margin:0; padding:0">
+      <h5>Our Retrieval Module</h5>
+      <center>
+        <img src="images/retrieval_module.png" style="width:100%"></img>
+        <div class="caption">
+          <p align="justify">
+            In the beginning, our Retrieval module will take <a href="https://mvk.hkustvgd.com/">MVK dataset</a> as input, then we pre-process videos to get CLIP features and metadata for indexing. With each text-based query, we will search and rank relevant videos and output them for use as input of the Explainability module. However, in order to make this process efficient and scalable, we split the retrieval module into two stages: the indexing stage and the retrieval stage. During the indexing stage, we preprocess and store the videos and their metadata in a vector database while maintaining all relevant information. In the retrieval stage, we use the power of both CPU and GPU to efficiently calculate the similarity scores between the query and the stored videos.
+          </p>
+        </div>
+        <br>
+      </center>
+    </div> -->
+
+    <div class="section">
+      <h5>Citation</h5>
+      <pre style="margin:0">
+        <code>@article{zheng2023real,
+  title={Real-time GAN-based image enhancement for robust underwater monocular SLAM},
+  author={Zheng, Ziqiang and Xin, Zhichao and Yu, Zhibin and Yeung, Sai-Kit},
+  journal={Frontiers in Marine Science},
+  year={2023},
+  publisher={Frontiers Research Foundation}
+}</code>
+        </pre>
+    </div>
+
+    <!-- -->
+    <br>
+
+  <!-- End Document
+         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
